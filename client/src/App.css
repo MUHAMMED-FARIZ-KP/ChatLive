@@ -1,3 +1,14 @@
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .App {
   width: 100vw;
   height: 100vh;
@@ -71,13 +82,15 @@ h3:hover {
   background: #263238;
   position: relative;
   cursor: pointer;
+  
 }
 .chat-window .chat-header p {
   display: block;
   padding: 0 1em 0 2em;
-  color: #fff;
+  color: #73b9d5;
   font-weight: 700;
   line-height: 45px;
+  animation: blink 1s infinite;
 }
 
 .chat-window .chat-body {

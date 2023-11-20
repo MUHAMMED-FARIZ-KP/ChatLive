@@ -27,7 +27,7 @@ function Chat({socket,username,room }) {
     return (
     <div className='chat-window'>
         <div className='chat-header'>
-            <p>Live Chat</p>
+            <p id="room-p">Room-id:  {room}</p>
         </div>
         <div className='chat-body'>
             <ScrollToBottom className='message-container'>
