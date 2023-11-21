@@ -3,7 +3,8 @@ import './App.css';
 import Chat from './Chat';
 import io from 'socket.io-client'
 
-const socket=io.connect("http://localhost:3001")
+const socket=io.connect("https://capable-buttery-dryer.glitch.me")
+// const socket=io.connect("http://localhost:3001")
 
 function App() {
   const [username,setUsername]=useState("")
