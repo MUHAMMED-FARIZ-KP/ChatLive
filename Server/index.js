@@ -1,8 +1,10 @@
 const express=require('express');
+require("dotenv").config();
 const app=express();
 const http=require("http");
 const cors=require("cors")
 const {Server}=require("socket.io")
+let PORT = process.env.PORT;
 
 app.use(cors());
 const server=http.createServer(app);
@@ -10,6 +12,7 @@ const io=new Server(server,{
     cors:{
         
         origin:"https://chat-live-react.vercel.app/",
+        //origin:"http://localhost:3000",
         methods:["GET","POST"],
     },
 });
@@ -29,6 +32,6 @@ io.on("connection",(socket)=>{
     });
 });
 
-server.listen(3001,()=>{
-    console.log("SERVER RUNNING")
+server.listen(PORT,()=>{
+    console.log(`Server is Running on *:${PORT} `);
 });
