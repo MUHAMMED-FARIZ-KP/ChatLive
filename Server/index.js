@@ -12,11 +12,14 @@ const io=new Server(server,{
     cors:{
         
         origin:"https://chat-live-react.vercel.app/",
-        //origin:"http://localhost:3000",
+       // origin:"http://localhost:3000",
         methods:["GET","POST"],
     },
 });
-
+app.get("/", (req, res) => {
+    res.send('haai guyzz');
+  });
+  
 io.on("connection",(socket)=>{
     console.log(`User connected: ${socket.id}`);
     socket.on("join_room",(data)=>{
