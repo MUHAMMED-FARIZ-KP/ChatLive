@@ -3,7 +3,7 @@ import './App.css';
 import Chat from './Chat';
 import io from 'socket.io-client'
 
- const socket=io.connect("https://chatlive-backend-j4yo.onrender.com")
+ const socket=io.connect("https://chatlive-2iss.onrender.com")
   // const socket=io.connect("http://localhost:3001")
 
 function App() {
